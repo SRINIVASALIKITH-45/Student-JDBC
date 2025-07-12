@@ -19,7 +19,7 @@ public class StudentApp {
 
             LOGGER.info("Enter Age: ");
             int age = sc.nextInt();
-            sc.nextLine(); // clear buffer
+            sc.nextLine(); 
 
             LOGGER.info("Enter Course: ");
             String course = sc.nextLine();
@@ -35,14 +35,14 @@ public class StudentApp {
 
                     int rows = stmt.executeUpdate();
                     if (rows > 0) {
-                        LOGGER.info("✅ Student inserted successfully.");
+                        LOGGER.info("Student inserted successfully.");
                     } else {
-                        LOGGER.warning("⚠️ No rows were inserted.");
+                        LOGGER.warning(" No rows were inserted.");
                     }
                 }
             }
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "❌ Error inserting student: ", e);
+            LOGGER.log(Level.SEVERE, " Error inserting student: ", e);
         }
     }
 }
